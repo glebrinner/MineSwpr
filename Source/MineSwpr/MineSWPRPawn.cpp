@@ -10,8 +10,15 @@
 AMineSWPRPawn::AMineSWPRPawn() 
 {
 	AutoPossessPlayer = EAutoReceiveInput::Player0;
-	GameInstance = Cast<UWebSocketGameInstance>(GetGameInstance());
 }
+
+	void AMineSWPRPawn::BeginPlay()
+	{
+		Super::BeginPlay();
+		GameInstance = Cast<UWebSocketGameInstance>(GetGameInstance());
+
+	}
+
 
 void AMineSWPRPawn::Tick(float DeltaSeconds)
 {

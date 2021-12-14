@@ -26,6 +26,8 @@ public:
 	
 	AMineSWPRPawn();
 
+	virtual void BeginPlay() override;
+
 protected:
 	void TriggerClick();
 	void TraceForBlock(const FVector& Start, const FVector& End, bool bDrawDebugHelpers);
